@@ -25,7 +25,6 @@ with open("sg.csv","rb") as sgfile:
 	    sgdict[key] = []
 	sgdict[key].append(value)
 
-print sgdict
 sg = []
 sg = sgdict.keys() ##Will use this array to control the recursive function
 
@@ -37,9 +36,7 @@ with open("sg.csv","rb") as sgfile:
     reader = csv.reader(sgfile)
     for row in reader:
 	key = row[0]+"-"+row[1]
-	print key
 	if key in sg:
-	    print "SG Found"
 	    jsondict["children"].append(dictmake(key))
 
 with open("data.json","wb") as file:
