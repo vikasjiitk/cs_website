@@ -71,6 +71,9 @@
 		display: none;
 	}
 
+	#nav {
+	    display: none;
+	}
 /* Banner */
 
 	#banner {
