@@ -6,7 +6,8 @@
 -->
 <html>
 	<head>
-		<title>Left Sidebar - Arcana by HTML5 UP</title>
+		<title>Counselling Service, IITK</title>
+		<link rel="shortcut icon" href="images/logo.png">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -21,69 +22,96 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
+		<script type="text/javascript">
+			$(function(){
+			var fixmeTop = $('#nav').offset().top;       // get initial position of the element
+			
+			
+			$(window).scroll(function() {                  // assign scroll event listener
+
+			var currentScroll = $(window).scrollTop(); // get current position
+
+			if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+			//window.alert(event_top);
+			$('#nav').css({                      // scroll to that element or below it
+			      padding: '0',
+			      position: 'fixed',
+			      left: '0',
+			      width: '100%'
+			});}
+			
+			else {                                   // apply position: static
+			    $('#nav').css({                      // if you scroll above it
+			    position: 'static'
+				});
+				}
+			});
+			});
+		</script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body>
 
 		<!-- Header -->
 			<div id="header">
-
-				<!-- Logo -->
-					<h1><a href="index.html" id="logo">Arcana <em>by HTML5 UP</em></a></h1>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="">Dropdown</a>
-								<ul>
-									<li><a href="#">Lorem dolor</a></li>
-									<li><a href="#">Magna phasellus</a></li>
-									<li><a href="#">Etiam sed tempus</a></li>
-									<li>
-										<a href="">Submenu</a>
-										<ul>
-											<li><a href="#">Lorem dolor</a></li>
-											<li><a href="#">Phasellus magna</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam nisl</a></li>
-											<li><a href="#">Veroeros feugiat</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Veroeros feugiat</a></li>
-								</ul>
-							</li>
-							<li class="current"><a href="left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="right-sidebar.html">Right Sidebar</a></li>
-							<li><a href="two-sidebar.html">Two Sidebar</a></li>
-							<li><a href="no-sidebar.html">No Sidebar</a></li>
-						</ul>
-					</nav>
-
-			</div>
-
+		    <!-- Next line is for the mobile version only -->
+			    <h1 style = "display:none"><a href="index.html" id="logo">Counselling Service <em>IIT Kanpur</em></a></h1>
+			    	
+			    <!-- Logo -->
+			    <div class = "row 0%">
+				<div class = "4u">
+				    <img src = "images/cs.png" style = "float:left; margin-left:3%;" width = "18%"/>
+				</div>
+				<div class = "4u"> 
+				    <h1 align = "center" style="font-size:110%"><a href="index.html">Counselling Service</a><br><a href="http://www.iitk.ac.in" target = "blank"><em>IIT Kanpur</em></a></h1>
+				</div>
+				<div class ="4u">
+				    <a href = "http://www.iitk.ac.in" target = "blank" ><img src = "images/iitk.png" style = "float:right; margin-right:2%" width = "16%"/i></a>
+				</div>
+			    </div>
+			</div>		    
+			<nav id="nav" style ="margin-top:0px;">
+					<ul style = "font-size:85%">
+						<li ><a href="index.html">Home</a></li>
+						<li class="current" >
+							<a href="">Student Support</a>
+							<ul>
+								<li><br></li>
+								<li><a href="#">Academic</a></li>
+								<li><a href="#">Emotional Counselling</a></li>
+								<li><a href="#">Student Benevolence Fund</a></li>
+								<li><a href="#">Workshops and Sessions</a></li>
+							</ul>
+						</li>
+						<li><a href="#">New Students</a></li>
+						<li><a href="">Important Info</a>
+					   		<ul>
+							<li><br></li>
+							<li><a href="#">Under-graduate</a></li>
+							<li><a href="#">Post-graduate</a></li>
+						    </ul>
+						</li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="family_tree/index.html">Family Tree</a></li>
+						<li><b><a href="#" style ="color:#ee1132">Emergency</a></b></li>
+					    
+					</ul>
+			</nav>
+		<!--id Banner-->
+			<section id="banner">
+				    <header>
+			    		    <h2>Reach Out - <em>there's always help if you need it. </em></h2>
+					</header>
+			</section>
 		<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
 					<div class="row 200%">
-						<div class="4u 12u(narrower)">
+						<div class="2u 12u(narrower)">
 							<div id="sidebar">
-
-								<!-- Sidebar -->
-
 									<section>
-										<h3>Just a Subheading</h3>
-										<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-										Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-										Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-										<footer>
-											<a href="#" class="button">Continue Reading</a>
-										</footer>
-									</section>
-
-									<section>
-										<h3>Another Subheading</h3>
+										<h3>Subheading</h3>
 										<ul class="links">
 											<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
 											<li><a href="#">Ornare in hendrerit in lectus</a></li>
@@ -109,8 +137,6 @@
 											<h2>Left Sidebar</h2>
 											<p>Sidebar on the left, content on the right.</p>
 										</header>
-
-										<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
 
 										<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 										Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
@@ -145,74 +171,48 @@
 			<div id="footer">
 				<div class="container">
 					<div class="row">
-						<section class="3u 6u(narrower) 12u$(mobilep)">
-							<h3>Links to Stuff</h3>
-							<ul class="links">
-								<li><a href="#">Mattis et quis rutrum</a></li>
-								<li><a href="#">Suspendisse amet varius</a></li>
-								<li><a href="#">Sed et dapibus quis</a></li>
-								<li><a href="#">Rutrum accumsan dolor</a></li>
-								<li><a href="#">Mattis rutrum accumsan</a></li>
-								<li><a href="#">Suspendisse varius nibh</a></li>
-								<li><a href="#">Sed et dapibus mattis</a></li>
+						<section class="8u 12u$(mobilep)">
+							<h3 align = "left">Quick Links</h3>
+						    <div class = "row">
+							<div class ="6u">
+							<ul class="links" align="left">
+								<li><a href="http://www.iitk.ac.in" target = "blank">IITK</a></li>
+								<li><a href="http://www.iitk.ac.in/dosa" target = "blank">Dean of Student Affairs</a></li>
+								<li><a href="http://www.iitk.ac.in/doaa" target = "blank">Dean of Academic Affairs</a></li>
 							</ul>
-						</section>
-						<section class="3u 6u$(narrower) 12u$(mobilep)">
-							<h3>More Links to Stuff</h3>
-							<ul class="links">
-								<li><a href="#">Duis neque nisi dapibus</a></li>
-								<li><a href="#">Sed et dapibus quis</a></li>
-								<li><a href="#">Rutrum accumsan sed</a></li>
-								<li><a href="#">Mattis et sed accumsan</a></li>
-								<li><a href="#">Duis neque nisi sed</a></li>
-								<li><a href="#">Sed et dapibus quis</a></li>
-								<li><a href="#">Rutrum amet varius</a></li>
+							</div>
+							<div class ="6u">
+							<ul class="links" align="left">   
+							     <li><a href="http://spo.iitk.ac.in" target = "blank">Student Placement Office</a></li>
+							    <li><a href="http://www.iitk.ac.in/hc" target = "blank">Health Centre</a></li>
+							    <li><a href="http://pkklib.iitk.ac.in" target = "blank">P.K Kelkar Library</a></li>
 							</ul>
+							</div>
+						</div>
 						</section>
-						<section class="6u 12u(narrower)">
-							<h3>Get In Touch</h3>
-							<form>
-								<div class="row 50%">
-									<div class="6u 12u(mobilep)">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="6u 12u(mobilep)">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<ul class="actions">
-											<li><input type="submit" class="button alt" value="Send Message" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
+						<section class="4u 12u(narrower) 12u$(mobilep)">
+						    <h3 align = "left">Gallery</h3>
+						    <ul class = "rslides">
+							<li><img src="images/counsel1.jpg" alt=""></li>
+							<li><img src="images/counsel2.jpg" alt=""></li>
+							<li><img src="images/counsel3.jpg" alt=""></li>
+						    </ul> 
 						</section>
 					</div>
 				</div>
 
 				<!-- Icons -->
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="https://www.facebook.com/CounsellingServiceIitKanpur" target ="blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://github.com/amlankar/cs_website/" target ="blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
 					</ul>
 
 				<!-- Copyright -->
 					<div class="copyright">
 						<ul class="menu">
-							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Counselling Service IITK - 2015</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
-					</div>
-
+					</div>	
 			</div>
 
 	</body>
