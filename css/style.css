@@ -745,11 +745,51 @@
 
 
 /*Banner*/
-	#banner {
-		background-image: url("../images/counsel1.jpg");
+	#banner_left{
+		background-image: url("../images/counsel2.jpg");
 		background-position: center center;
 		background-size: cover;
-		height: 28em;
+		height: 15em;
+		text-align: center;
+		position: relative;
+	
+	}
+		#banner_left header{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+
+			background: #212121;
+			background: rgba(27, 27, 27, 0.75);
+			color: #fff;
+			padding: 0 0;
+		
+		}
+		#banner_left header h2 {
+				display: inline-block;
+				margin: 0;
+				font-size: 1.25em;
+				vertical-align: middle;
+			}
+
+				#banner_left header h2 em {
+					opacity: 0.75;
+				}
+
+				#banner_left header h2 a {
+					border-bottom-color: rgba(255, 255, 255, 0.5);
+				}
+
+					#banner_left header h2 a:hover {
+						border-bottom-color: transparent;
+					}
+
+	#banner {
+		background-image: url("../images/counsel2.jpg");
+		background-position: center center;
+		background-size: cover;
+		height: 17em;
 		text-align: center;
 		position: relative;
 	}
@@ -762,7 +802,7 @@
 			background: #212121;
 			background: rgba(27, 27, 27, 0.75);
 			color: #fff;
-			padding: 1em 0;
+			padding: 0 0;
 		}
 
 			#banner header h2 {
@@ -883,3 +923,8 @@
 			text-align: center;
 			font-size: 0.9em;
 		}
+		.Events{
+			opacity: 0;
+			padding: 0 0 0 0;
+		}
+	

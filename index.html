@@ -30,24 +30,35 @@
 		    	});
 			
 			var fixmeTop = $('#nav').offset().top;       // get initial position of the element
-
+			
+			
 			$(window).scroll(function() {                  // assign scroll event listener
 
 			var currentScroll = $(window).scrollTop(); // get current position
 
 			if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+			//window.alert(event_top);
 			$('#nav').css({                      // scroll to that element or below it
 			      padding: '0',
 			      position: 'fixed',
 			      left: '0',
 			      width: '100%'
-			});
-			} else {                                   // apply position: static
+			});}
+			
+			else {                                   // apply position: static
 			    $('#nav').css({                      // if you scroll above it
 			    position: 'static'
 			});
-			}	
+			}
+			$('.Events').each(function(i){
+				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            	var bottom_of_window = $(window).scrollTop() + $(window).height();
+					if (bottom_of_window > bottom_of_object){
+						$(this).animate({'opacity':'1'},500);
+					}
 
+			});
+				
 			});
 		    });
 		</script>	
@@ -72,37 +83,34 @@
 				</div>
 			    </div>
 			</div>		    
-				<nav id="nav" style ="margin-top:0px;">
-						<ul style = "font-size:85%">
-							<li class="current"><a href="index.html">Home</a></li>
-							<li>
-								<a href="">Student Support</a>
-								<ul>
-									<li><br></li>
-									<li><a href="#">Academic</a></li>
-									<li><a href="#">Emotional Counselling</a></li>
-									<li><a href="#">Student Benevolence Fund</a></li>
-									<li><a href="#">Workshops and Sessions</a></li>
-								</ul>
-							</li>
-							<li><a href="#">New Students</a></li>
-							<li><a href="">Important Info</a>
-							    <ul>
+			<nav id="nav" style ="margin-top:0px;">
+					<ul style = "font-size:85%">
+						<li class="current"><a href="index.html">Home</a></li>
+						<li>
+							<a href="">Student Support</a>
+							<ul>
 								<li><br></li>
-								<li><a href="#">Under-graduate</a></li>
-								<li><a href="#">Post-graduate</a></li>
-							    </ul>
-							</li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="family_tree/index.html">Family Tree</a></li>
-							<li><b><a href="#" style ="color:#ee1132">Emergency</a></b></li>
+								<li><a href="#">Academic</a></li>
+								<li><a href="#">Emotional Counselling</a></li>
+								<li><a href="#">Student Benevolence Fund</a></li>
+								<li><a href="#">Workshops and Sessions</a></li>
+							</ul>
+						</li>
+						<li><a href="#">New Students</a></li>
+						<li><a href="">Important Info</a>
+					   		<ul>
+							<li><br></li>
+							<li><a href="#">Under-graduate</a></li>
+							<li><a href="#">Post-graduate</a></li>
+						    </ul>
+						</li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="family_tree/index.html">Family Tree</a></li>
+						<li><b><a href="#" style ="color:#ee1132">Emergency</a></b></li>
 					    
 					</ul>
-			    	</nav>
-
-	
-			</div>
+			</nav>
 
 		<!-- Slideshow -->
 			<section id="banner">
@@ -112,7 +120,7 @@
 				    <li><img src="images/counsel3.jpg" alt=""></li>
 				</ul> -->
 			
-			    	<header>
+			    <header>
 		    		    <h2>Reach Out - <em>there's always help if you need it. </em></h2>
 				</header>
 			</section>
@@ -174,58 +182,58 @@
 					</div>
 				</div>
 			</section>
-		<header class = "major" style="background:#FFFFFF; padding: 0, margin: 0;">
+		<header class = "major Events" style="background:#FFFFFF; padding: 0; margin: 0;">
 		    <h2 style = "padding: 0; margin: 0">Events</h2>
 		</header>
-		    <section class="wrapper style1">
+		    <section class="wrapper style1 ">
 				<div class="container">
-					<div class="row">
-						<section class="6u 12u(narrower)">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+					<div class="4u 12u$(mobile) row" style="padding-left:2em; padding-top:1em; border-right: grey thin solid;">
+						<section class="12u 12u(narrower) Events" style="padding:0;">
+							<div>
+								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic01.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 1</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
 								</div>
 							</div>
 						</section>
-						<section class="6u 12u(narrower)">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
+						<section class="12u 12u(narrower) Events" style="padding:0;">
+							<div >
+								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic02.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 2</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
 								</div>
 							</div>
 						</section>
 				
-						<section class="6u 12u(narrower)">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
+						<section class="12u 12u(narrower) Events" style="padding:0;">
+							<div>
+								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic03.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 3</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
 								</div>
 							</div>
 						</section>
-						<section class="6u 12u(narrower)">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+						<section class="12u 12u(narrower) Events" style="padding:0;">
+							<div >
+								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic04.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 4</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
 								</div>
 							</div>
 						</section>
 					</div>
 				</div>
 			</section>
-			<header class = "major" style="background:#FFFFFF; padding: 0, margin: 0;">
+			<header class = "6u 12u$(mobilep) major" style="background:#FFFFFF; padding: 0, margin: 0;">
 			<h2 style = "padding: 0; margin: 0">Location</h2>
 		</header>
 			<div class = "row">
 			<br>
-			<section class="9u 12u$(mobilep)">
+			<section class="6u 12u$(mobilep)">
 			    <iframe height="300" width = "100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3570.2812690955584!2d80.23289299999999!3d26.511077000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c37aa4e0e230b%3A0x6cc97e0b89df1288!2sCounselling+Service%2CIIT+Kanpur!5e0!3m2!1sen!2s!4v1403568309372;z=6&amp;output=embed"></iframe>
 			</section>
 			<section class="3u 12u$(mobilep)">
@@ -241,6 +249,7 @@
 			    Phone:    +91 512 2597784<br>
 			    Email:      counsel@iitk.ac.in<br></p>
 			</section>
+			
 			</div>
 			<section id="cta" class="wrapper style3">
 				<div class="container">
