@@ -28,19 +28,19 @@
 			          $("#banner").css("background-image", "url('images/counsel3.jpg')");
 			          $("#banner").css("opacity","0");
 			          $("#banner header").html('<h2>Help - <em>Something we all need some time or the other</em></h2>');
-				  $("#banner").animate({ opacity: 1 }, 'slow');
+				  $("#banner").stop().animate({ opacity: 1 }, 'slow');
 			    });
 			 $("#home").mouseover(function(){
 			          $("#banner").css("background-image", "url('images/counsel2.jpg')");
 				  $("#banner").css("opacity","0");
 				 $("#banner header").html("<h2>Reach Out - <em>there's always help if you need it </em></h2>");
-				 $("#banner").animate({ opacity: 1 }, 'slow');
+				 $("#banner").stop().animate({ opacity: 1 }, 'slow');
 			    });
 			 $("#new").mouseover(function(){
 			          $("#banner").css("background-image", "url('images/new.jpg')");
 				  $("#banner").css("opacity","0");
 				  $("#banner header").html('<h2><em>Get started on your next</em> adventure</h2>');  
-				  $("#banner").animate({ opacity: 1 }, 'slow');
+				  $("#banner").stop().animate({ opacity: 1 }, 'slow');
 			    });
 				
 			$(".rslides").responsiveSlides({
