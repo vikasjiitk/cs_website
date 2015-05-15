@@ -23,7 +23,26 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<script>
-		    $(function() {
+		    $(document).ready(function() {
+			 $("#support").mouseover(function(){
+			          $("#banner").css("background-image", "url('images/counsel3.jpg')");
+			          $("#banner").css("opacity","0");
+			          $("#banner header").html('<h2>Help - <em>Something we all need some time or the other</em></h2>');
+				  $("#banner").animate({ opacity: 1 }, 'slow');
+			    });
+			 $("#home").mouseover(function(){
+			          $("#banner").css("background-image", "url('images/counsel2.jpg')");
+				  $("#banner").css("opacity","0");
+				 $("#banner header").html("<h2>Reach Out - <em>there's always help if you need it </em></h2>");
+				 $("#banner").animate({ opacity: 1 }, 'slow');
+			    });
+			 $("#new").mouseover(function(){
+			          $("#banner").css("background-image", "url('images/new.jpg')");
+				  $("#banner").css("opacity","0");
+				  $("#banner header").html('<h2><em>Get started on your next</em> adventure</h2>');  
+				  $("#banner").animate({ opacity: 1 }, 'slow');
+			    });
+				
 			$(".rslides").responsiveSlides({
 			    speed: 1000,
 			    random: true,
@@ -85,18 +104,18 @@
 			</div>		    
 			<nav id="nav" style ="margin-top:0px;">
 					<ul style = "font-size:85%">
-						<li class="current"><a href="index.html">Home</a></li>
-						<li>
+						<li id = "home" class="current"><a href="index.html">Home</a></li>
+						<li id = "support">
 							<a href="">Student Support</a>
 							<ul>
 								<li><br></li>
-								<li><a href="#">Academic</a></li>
+								<li><a href="#">Academic Support</a></li>
 								<li><a href="#">Emotional Counselling</a></li>
 								<li><a href="#">Student Benevolence Fund</a></li>
 								<li><a href="#">Workshops and Sessions</a></li>
 							</ul>
 						</li>
-						<li><a href="#">New Students</a></li>
+						<li id = "new"><a href="#">New Students</a></li>
 						<li><a href="">Important Info</a>
 					   		<ul>
 							<li><br></li>
@@ -120,7 +139,7 @@
 				    <li><img src="images/counsel3.jpg" alt=""></li>
 				</ul> -->
 			
-			    <header>
+				<header>
 		    		    <h2>Reach Out - <em>there's always help if you need it. </em></h2>
 				</header>
 			</section>
@@ -187,7 +206,7 @@
 		</header>
 		    <section class="wrapper style1 ">
 				<div class="container">
-					<div class="4u 12u$(mobile) row" style="padding-left:2em; padding-top:1em; border-right: grey thin solid;">
+					<div class="3u 6u$(mobile) row" style="padding-left:2em; padding-top:1em; border-right: grey thin solid;">
 						<section class="12u 12u(narrower) Events" style="padding:0;">
 							<div>
 								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic01.jpg" alt="" /></a>
