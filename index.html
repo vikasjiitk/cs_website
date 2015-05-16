@@ -25,23 +25,48 @@
 		<script>
 		    $(document).ready(function() {
 			 $("#support").mouseover(function(){
-			          $("#banner").css("background-image", "url('images/counsel3.jpg')");
 			          $("#banner").css("opacity","0");
+			          $("#banner").css("background-image", "url('images/counsel3.jpg')");
 			          $("#banner header").html('<h2>Help - <em>Something we all need some time or the other</em></h2>');
-				  $("#banner").stop().animate({ opacity: 1 }, 'slow');
+				  $("#banner").stop().animate({ opacity: 1 }, 500);
 			    });
 			 $("#home").mouseover(function(){
-			          $("#banner").css("background-image", "url('images/counsel2.jpg')");
 				  $("#banner").css("opacity","0");
+			      $("#banner").css("background-image", "url('images/counsel2.jpg')");
 				 $("#banner header").html("<h2>Reach Out - <em>there's always help if you need it </em></h2>");
-				 $("#banner").stop().animate({ opacity: 1 }, 'slow');
+				 $("#banner").stop().animate({ opacity: 1 }, 500);
 			    });
 			 $("#new").mouseover(function(){
-			          $("#banner").css("background-image", "url('images/new.jpg')");
 				  $("#banner").css("opacity","0");
+		          $("#banner").css("background-image", "url('images/new.jpg')");
 				  $("#banner header").html('<h2><em>Get started on your next</em> adventure</h2>');  
-				  $("#banner").stop().animate({ opacity: 1 }, 'slow');
+				  $("#banner").stop().animate({ opacity: 1 }, 500);
 			    });
+			 var current = "#E_1"
+			 $(".E1").mouseover(function(){
+			 	$(current).removeClass("acti");
+			 	$("#E_1").addClass("acti");
+			 	document.getElementById("heading_events").innerHTML ="Event 1";
+			 	current = "#E_1";
+			 });
+			$(".E2").mouseover(function(){
+			 	$(current).removeClass("acti");
+			 	$("#E_2").addClass("acti");
+			 	document.getElementById("heading_events").innerHTML ="Event 2";
+			 	current = "#E_2";
+			 });
+			$(".E3").mouseover(function(){
+			 	$(current).removeClass("acti");
+			 	$("#E_3").addClass("acti");
+			 	document.getElementById("heading_events").innerHTML ="Event 3";
+			 	current = "#E_3";
+			 });
+			$(".E4").mouseover(function(){
+			 	$(current).removeClass("acti");
+			 	$("#E_4").addClass("acti");
+			 	document.getElementById("heading_events").innerHTML ="Event 4";
+			 	current = "#E_4";
+			 });
 				
 			$(".rslides").responsiveSlides({
 			    speed: 1000,
@@ -202,23 +227,23 @@
 				</div>
 			</section>
 		<header class = "major Events" style="background:#FFFFFF; padding: 0; margin: 0;">
-		    <h2 style = "padding: 0; margin: 0">Events</h2>
+		    <h2 id="heading_events"style = "padding: 0; margin: 0">Event 1</h2>
 		</header>
-		    <section class="wrapper style1 ">
-				<div class="container">
-					<div class="3u 6u$(mobile) row" style="padding-left:2em; padding-top:1em; border-right: grey thin solid;">
-						<section class="12u 12u(narrower) Events" style="padding:0;">
+				<div class="row">
+					<br><br>	
+					<div class="3u 6u$(mobile)" style="padding-left:2em; padding-top:1em; border-right: rgb(184, 177, 177) thin solid;">
+						<section class="Events E1" style="padding:0;">
 							<div>
-								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic01.jpg" alt="" /></a>
+								<a href="#" class="image left" style=" width:2em; height:2em; margin: 0 2em;"><img src="images/pic01.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 1</h3>
 									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
 								</div>
 							</div>
 						</section>
-						<section class="12u 12u(narrower) Events" style="padding:0;">
+						<section class="Events E2" style="padding:0;">
 							<div >
-								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic02.jpg" alt="" /></a>
+								<a href="#" class="image left" style=" width:2em; height:2em; margin: 0 2em;"><img src="images/pic02.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 2</h3>
 									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
@@ -226,18 +251,18 @@
 							</div>
 						</section>
 				
-						<section class="12u 12u(narrower) Events" style="padding:0;">
+						<section class="Events E3" style="padding:0;">
 							<div>
-								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic03.jpg" alt="" /></a>
+								<a href="#" class="image left" style=" width:2em; height:2em; margin: 0 2em;"><img src="images/pic03.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 3</h3>
 									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
 								</div>
 							</div>
 						</section>
-						<section class="12u 12u(narrower) Events" style="padding:0;">
+						<section class="Events E4" style="padding:0;">
 							<div >
-								<a href="#" class="image left" style=" width:2em; height:2em;"><img src="images/pic04.jpg" alt="" /></a>
+								<a href="#" class="image left" style=" width:2em; height:2em; margin: 0 2em;"><img src="images/pic04.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Event 4</h3>
 									<!--p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p-->
@@ -245,8 +270,13 @@
 							</div>
 						</section>
 					</div>
+					<div class="event_des Events ">
+						<section id="E_1" class="8u desc acti"><p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu. kasdjha aksjd qwerwe ad jdjdj jdid aosd kadh ajhd kahsdkjha haskjdhka dak kdjhaksjdh akhdk adkahsdk akhk hakdh  kajhsdk aksjhd kjh kas dkajhd kajhdkajshdkajsd haksh  ashdkajhdkahdk hajhf oaof   kfj a ; sadjfkajlsdfj astjjfa  adjsflkajlk  kdlasfjljlk ljkj lkjl kjj jf  ds s sdfjl jsdlkfj </p></section>
+						<section id="E_2" class="8u desc"><p>We understand that you want to gain as much from your time at IIT Kanpur as is possible, both academically and socially. The Counselling Service strives to ensure the welfare of the students by providing them emotional, academic and financial assistance. By looking after your well-being, the Service tries to ensure that IITK is not just an institute, but a home away from home for you. The Service consists of a team of professional counsellors and a dedicated group of student volunteers and faculty advisors working in two primary arms: one concentrates on acclimatizing the freshmen to the new environment, and the other deals with mental health issues of the students.</p></section>
+						<section id="E_3" class="8u desc"><p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, dkahdk hajhf oaof   kfj a ; sadjfkajlsdfj astjjfa  adjsflkajlk  kdlasfjljlk ljkj lkjl kjj jf  ds s sdfjl jsdlkfj </p></section>
+						<section id="E_4" class="8u desc"><p>a dak kdjhaksjdh akhdk adkahsdk akhk hakdh  kajhsdk aksjhd kjh kas dkajhd kajhdkajshdkajsd haksh  ashDuis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu. kasdjha aksjdjdh akhdk adkahsdk akhk hakdh  kajhsdk aksjhd kjh kas dkajhd kajhdkajshdkajsd haksh  ashDuis neque nisi, dapibu qwerwe ad jdjdj jdid aosd kadh ajhd kahsdkjha haskjdhk</p></section>
+					</div>
 				</div>
-			</section>
 			<header class = "12u 12u$(mobilep) major" style="background:#FFFFFF; padding: 0, margin: 0;">
 			<h2 style = "padding: 0; margin: 0">Location</h2>
 		</header>
