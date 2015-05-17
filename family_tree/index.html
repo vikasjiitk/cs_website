@@ -48,16 +48,32 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="dndTree.js"></script>
-
-<body>  
-   <div id="tree-container" style = "background-color:#EEE">
-	<form id="search" ACTION="" METHOD="GET">
+<script>
+$(document).ready(function() {
+ $(window).keydown(function(event){
+   if(event.keyCode == 13) {
+     event.preventDefault();
+     return false;
+   }
+ });
+}); 
+</script>
+<head>
+<title>
+IITK Family Tree
+</title>
+<link rel="shortcut icon" href="../images/logo.png">
+<body> 
+    <div style = "background-color:#EEE; position:fixed;top:0;width:100%">
+    	<form id="search">
 		Search by roll number:
 		<INPUT TYPE="text" id="input" VALUE="">
-		<INPUT TYPE="button" id="button" Value="Search">
+		<INPUT TYPE="button" id="button" Value="Click to search">
 	</FORM>
 	Instructions: Mouse scroll for zooming. Drag empty screen area for panning. Search works only if the node is open(initially all nodes are open)
-   </div>
+    </div> 
+    <div id="tree-container">
+    </div>
 
 </body>
 </html>

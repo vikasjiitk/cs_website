@@ -67,28 +67,43 @@ treeJSON = d3.json("data.json", function(error, treeData) {
     document.getElementById("button").onclick=function(){
 	testResults(document.getElementById("search"));
     }
-
+    
     function testResults(form) {	
     	searchname = form.input.value; 
-	searchnode();
+	searchNode();
 	notfound();	
 	}
     
     // Search for a node
     var found = 0;
     var fcount = 0;
-    function searchnode(){
-    	visit(treeData, function(d){
-		if(searchname != ""){
-			if(d.name.indexOf(searchname) > -1){
-				found = 1;
-				fcount += 1;			
-				centerNode(d);
-			}
-		}
-	}, function(d){
-	return d.children && d.children.length > 0 ? d.children : null;
-    	});	
+    function searchNode() {
+    //find the node
+	var node = d3.selectAll(".node");
+	node.style("fill","black");
+	if (searchname == "none") {
+	} 
+	else {
+	    var selected = node.filter(function (d, i) {
+            return (d.name.indexOf(searchname) > -1);
+	});
+        if (selected.length != 0){
+	    found = 1;
+	    fcount = 1;
+        }
+        selected.style("fill", "red");
+    
+    visit(treeData, function(d){
+	if(searchname != ""){
+	    if(d.name.indexOf(searchname) > -1){
+		centerNode(d);
+	    }
+	}
+    }, function(d){
+    return d.children && d.children.length > 0 ? d.children : null;
+	});	
+    } 
+    
     }
     function notfound(){
     	if (found == 0 && fcount == 0)
