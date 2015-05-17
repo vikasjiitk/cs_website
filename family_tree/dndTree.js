@@ -71,10 +71,12 @@ treeJSON = d3.json("data.json", function(error, treeData) {
     function testResults(form) {	
     	searchname = form.input.value; 
 	searchnode();
+	notfound();	
 	}
     
     // Search for a node
-    var found;
+    var found = 0;
+    var fcount = 0;
     function searchnode(){
     	visit(treeData, function(d){
 		if(searchname != ""){
@@ -88,12 +90,11 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	return d.children && d.children.length > 0 ? d.children : null;
     	});	
     }
-    var fcount = 0;
-    if (found != 1 && fcount != 0)
-	window.alert(searchname + " not found!");
-
-    found = 0;
-	
+    function notfound(){
+    	if (found == 0 && fcount == 0)
+		window.alert(searchname + " not found!");    
+	found = 0; fcount = 0;	
+	}
 
     // TODO: Pan function, can be better implemented.
 
