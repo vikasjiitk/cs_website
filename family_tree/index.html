@@ -6,6 +6,7 @@
     cursor: pointer;
   }
 
+   
   .overlay{
       background-color:#EEE;
   }
@@ -15,7 +16,7 @@
     stroke: steelblue;
     stroke-width: 1.5px;
   }
-   
+  
   .node text {
     font-size:10px; 
     font-family:sans-serif;
@@ -41,11 +42,22 @@
        display: none;
   }
 
+  
+
 </style>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="dndTree.js"></script>
-<body>
-    <div id="tree-container"></div>
+
+<body>  
+   <div id="tree-container" style = "background-color:#EEE">
+	<form id="search" ACTION="" METHOD="GET">
+		Search by roll number:
+		<INPUT TYPE="text" id="input" VALUE="">
+		<INPUT TYPE="button" id="button" Value="Search">
+	</FORM>
+	Instructions: Mouse scroll for zooming. Drag empty screen area for panning. Search works only if the node is open(initially all nodes are open)
+   </div>
+
 </body>
 </html>
