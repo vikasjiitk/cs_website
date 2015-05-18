@@ -74,6 +74,15 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	notfound();	
 	}
     
+    function showimg(node){
+	    var roll = node.name.match(/(\d+)/)[1];
+	    var style = document.getElementById("facediv").style;
+	    var img = document.getElementById("face");
+	    style.display = "block";
+	    img.src = "http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/"+roll+"_0.jpg";
+	    document.getElementById("facename").innerHTML = node.name;
+	}
+
     // Search for a node
     var found = 0;
     var fcount = 0;
@@ -97,6 +106,7 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	if(searchname != ""){
 	    if(d.name.indexOf(searchname) > -1){
 		centerNode(d);
+		showimg(d); 
 	    }
 	}
     }, function(d){
@@ -395,14 +405,6 @@ treeJSON = d3.json("data.json", function(error, treeData) {
                 return d._children ? "lightsteelblue" : "#fff";
             });
 
-	function showimg(node){
-	    var roll = node.name.match(/(\d+)/)[1];
-	    var style = document.getElementById("facediv").style;
-	    var img = document.getElementById("face");
-	    style.display = "block";
-	    img.src = "http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/"+roll+"_0.jpg";
-	    document.getElementById("facename").innerHTML = node.name;
-	}
         nodeEnter.append("text")
             .attr("x", function(d) {
                 return d.children || d._children ? -10 : 10;
