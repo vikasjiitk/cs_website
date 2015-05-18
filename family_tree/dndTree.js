@@ -79,7 +79,7 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	    var style = document.getElementById("facediv").style;
 	    var img = document.getElementById("face");
 	    style.display = "block";
-	    img.src = "http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/"+roll+"_0.jpg";
+	    img.src = "images/"+roll+"_0.jpg";
 	    document.getElementById("facename").innerHTML = node.name;
 	}
 
@@ -89,6 +89,8 @@ treeJSON = d3.json("data.json", function(error, treeData) {
     function searchNode() {
     //find the node
 	var node = d3.selectAll(".node");
+	node.style("fill","black");
+	node.style("text-decoration","none");
 	node.style("font-weight","normal");
 	if (searchname == "none") {
 	} 
@@ -100,8 +102,8 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	    found = 1;
 	    fcount = 1;
         }
-        selected.style("font-weight", "bolder");
-    
+        selected.style("fill","#A80000");
+        selected.style("font-weight","bolder");
     visit(treeData, function(d){
 	if(searchname != ""){
 	    if(d.name.indexOf(searchname) > -1){
