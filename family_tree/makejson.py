@@ -19,8 +19,8 @@ sgdict = {}
 with open("sg.csv","rb") as sgfile:
     reader = csv.reader(sgfile)
     for row in reader:
-	key = row[0].lower()+"-"+row[1]
-	value = row[2].lower()+"-"+row[3]
+	key = row[0].lower().title()+"-"+row[1]
+	value = row[2].lower().title()+"-"+row[3]
 	if key not in sgdict.keys():
 	    sgdict[key] = []
 	sgdict[key].append(value)
@@ -35,7 +35,7 @@ jsondict["children"] = []
 with open("sg.csv","rb") as sgfile:
     reader = csv.reader(sgfile)
     for row in reader:
-	key = row[0].lower()+"-"+row[1]
+	key = row[0].lower().title()+"-"+row[1]
 	if key in sg:
 	    jsondict["children"].append(dictmake(key))
 

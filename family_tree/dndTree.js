@@ -395,6 +395,14 @@ treeJSON = d3.json("data.json", function(error, treeData) {
                 return d._children ? "lightsteelblue" : "#fff";
             });
 
+	function showimg(node){
+	    var roll = node.name.match(/(\d+)/)[1];
+	    var style = document.getElementById("facediv").style;
+	    var img = document.getElementById("face");
+	    style.display = "block";
+	    img.src = "http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/"+roll+"_0.jpg";
+	    document.getElementById("facename").innerHTML = node.name;
+	}
         nodeEnter.append("text")
             .attr("x", function(d) {
                 return d.children || d._children ? -10 : 10;
@@ -408,7 +416,7 @@ treeJSON = d3.json("data.json", function(error, treeData) {
                 return d.name;
             })
             .style("fill-opacity", 0);
-
+	   
         // phantom node to give us mouseover in a radius around it
         nodeEnter.append("circle")
             .attr('class', 'ghostCircle')
@@ -433,7 +441,15 @@ treeJSON = d3.json("data.json", function(error, treeData) {
             })
             .text(function(d) {
                 return d.name;
-            });
+            })
+	    .on("mouseover", function(d){
+		showimg(d);
+	    })
+	    .on("mouseout", function(d){
+		document.getElementById("facediv").style.display = "none";
+	    })
+	    ;
+
 
         // Change the circle fill depending on whether it has children and is collapsed
         node.select("circle.nodeCircle")

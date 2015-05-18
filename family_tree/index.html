@@ -2,13 +2,17 @@
 <meta charset="utf-8">
 <style type="text/css">
   
-    .node {
+  body{
+    margin:0;
+    padding:0;
+    font-family:'Open Sans',sans-serif;
+  }
+  .node {
     cursor: pointer;
   }
 
    
   .overlay{
-      background-color:#EEE;
   }
    
   .node circle {
@@ -19,7 +23,7 @@
   
   .node text {
     font-size:10px; 
-    font-family:sans-serif;
+    font-family:'Open Sans',sans-serif;
   }
    
   .link {
@@ -59,20 +63,26 @@ $(document).ready(function() {
 }); 
 </script>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <title>
 IITK Family Tree
 </title>
 <link rel="shortcut icon" href="../images/logo.png">
 <body> 
-    <div style = "background-color:#EEE; position:fixed;top:0;width:100%">
-    	<form id="search">
+    <div style = "background-color:#EEE; position:fixed;top:0;width:90%;left:0;">
+    	<form id="search" style = "font-size: 80%">
 		Search by roll number:
 		<INPUT TYPE="text" id="input" VALUE="">
 		<INPUT TYPE="button" id="button" Value="Click to search">
-	</FORM>
-	Instructions: Mouse scroll for zooming. Drag empty screen area for panning. Search works only if the node is open(initially all nodes are open)
+	<br>
+	Instructions: Mouse scroll for zooming. Drag empty screen area for panning. Search works only if the node is open(initially all nodes are open). Hovering shows the student's image.
+	</form>
     </div> 
-    <div id="tree-container">
+   <div id = "facediv" style = "background-color:#EEE;position:fixed;top:0;right:0;width:10%;display:none">
+	<img id = "face" src = "" width = 100% />
+	<p id = "facename" align = "center"></p>
+   </div>
+   <div id="tree-container">
     </div>
 
 </body>
