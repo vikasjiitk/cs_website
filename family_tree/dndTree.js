@@ -89,7 +89,7 @@ treeJSON = d3.json("data.json", function(error, treeData) {
     function searchNode() {
     //find the node
 	var node = d3.selectAll(".node");
-	node.style("fill","black");
+	node.style("font-weight","normal");
 	if (searchname == "none") {
 	} 
 	else {
@@ -100,7 +100,7 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	    found = 1;
 	    fcount = 1;
         }
-        selected.style("fill", "red");
+        selected.style("font-weight", "bolder");
     
     visit(treeData, function(d){
 	if(searchname != ""){
