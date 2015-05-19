@@ -63,3 +63,13 @@
 	.wrapper {
 		padding: 2em 0 1px 0;
 	}
+	.event_des{
+		display: none;
+	}
+	.Events .inner p{
+			display: inline-block;
+			padding: .5em 1.8em;
+		}
+	.major {
+		display: none;
+	}

@@ -926,6 +926,9 @@
 		.Events{
 			opacity: 0;
 		}
+		.Events .inner p{
+			display: none;
+		}
 		.desc{
 			position: absolute;
 			opacity: 0;
