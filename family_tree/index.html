@@ -27,6 +27,7 @@
   .node text {
     font-size:15px; 
     font-family:'Open Sans',sans-serif;
+    font-weight:bold;
   }
    
   .link {
@@ -49,18 +50,28 @@
        display: none;
   }
 
-  
+  .no-js #loader { display: none;  }
+  .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+  .se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(Preloader_5.gif) center no-repeat #fff;
+    }
 
 </style>
+
 <script src="jquery.min.js"></script>
-<script src="d3.v3.min.js"></script>
-<script src="dndTree.js"></script>
 <script>
+
 $(document).ready(function() {
- $(window).keydown(function(event){
-   if(event.keyCode == 13) {
-     event.preventDefault();
-     return false;
+    $(window).keydown(function(event){
+	if(event.keyCode == 13) {
+	event.preventDefault();
+	return false;   
    }
  });
 }); 
@@ -72,6 +83,16 @@ IITK Family Tree
 </title>
 <link rel="shortcut icon" href="../images/logo.png">
 <body> 
+    <div class="se-pre-con"></div>
+<script>
+    $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("3000");;
+    });
+</script>
+    <script src="d3.v3.min.js"></script>
+    <script src="dndTree.js"></script>
+
     <div style = "background-color:#EEE; position:fixed;top:0;width:90%;left:0;">
     	<form id="search" style = "font-size: 80%">
 		Search by roll number:
