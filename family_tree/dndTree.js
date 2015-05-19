@@ -30,9 +30,8 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 
     function visit(parent, visitFn, childrenFn) {
         if (!parent) return;
-
         visitFn(parent);
-
+	
         var children = childrenFn(parent);
         if (children) {
             var count = children.length;
@@ -84,7 +83,6 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 
     // Search for a node
     var found = 0;
-    var fcount = 0;
     function searchNode() {
     //find the node
 	var node = d3.selectAll(".node");
@@ -99,7 +97,6 @@ treeJSON = d3.json("data.json", function(error, treeData) {
 	});
         if (selected.length != 0){
 	    found = 1;
-	    fcount = 1;
         }
         selected.style("fill","#A80000");
         selected.style("font-weight","bolder");
@@ -117,9 +114,9 @@ treeJSON = d3.json("data.json", function(error, treeData) {
     
     }
     function notfound(){
-    	if (found == 0 && fcount == 0)
+    	if (found == 0)
 		window.alert(searchname + " not found!");    
-	found = 0; fcount = 0;	
+	found = 0;	
 	}
 
     // TODO: Pan function, can be better implemented.
@@ -150,11 +147,9 @@ treeJSON = d3.json("data.json", function(error, treeData) {
     }
 
     // Define the zoom function for the zoomable tree
-
     function zoom() {
         svgGroup.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
     }
-
 
     // define the zoomListener which calls the zoom function on the "zoom" event constrained within the scaleExtents
     var zoomListener = d3.behavior.zoom().scaleExtent([0.1, 3]).on("zoom", zoom);
