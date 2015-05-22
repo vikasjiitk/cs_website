@@ -1,7 +1,6 @@
-Source code for the Counselling Service, IIT Kanpur website.
-
-The website is hosted at [Counselling Service, IITK](http://iitk.ac.in/counsel)
-
+Source code for the Counselling Service, IIT Kanpur website.  
+May 2015  
+The website is hosted at [Counselling Service, IITK](http://iitk.ac.in/counsel)  
 
 TO-DO:
 -> All other pages
