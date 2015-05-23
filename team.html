@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Team - 2015-16</title>
+		<link rel="shortcut icon" href="images/logo.png">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<script type="text/javascript">
+			$(function(){
+			var fixmeTop = $('#nav').offset().top;       // get initial position of the element
+			
+			
+			$(window).scroll(function() {                  // assign scroll event listener
+
+			var currentScroll = $(window).scrollTop(); // get current position
+
+			if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+			//window.alert(event_top);
+			$('#nav').css({                      // scroll to that element or below it
+			      padding: '0',
+			      position: 'fixed',
+			      left: '0',
+			      width: '100%'
+			});}
+			
+			else {                                   // apply position: static
+			    $('#nav').css({                      // if you scroll above it
+			    position: 'static'
+				});
+				}
+			});
+			});
+		</script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+		    <!-- Next line is for the mobile version only -->
+			    <h1 style = "display:none"><a href="index.html" id="logo">Counselling Service <em>IIT Kanpur</em></a></h1>
+			    	
+			    <!-- Logo -->
+			    <div class = "row 0%">
+				<div class = "4u">
+				    <img src = "images/cs.png" style = "float:left; margin-left:3%;" width = "18%"/>
+				</div>
+				<div class = "4u"> 
+				    <h1 align = "center" style="font-size:110%"><a href="index.html">Counselling Service</a><br><a href="http://www.iitk.ac.in" target = "blank"><em>IIT Kanpur</em></a></h1>
+				</div>
+				<div class ="4u">
+				    <a href = "http://www.iitk.ac.in" target = "blank" ><img src = "images/iitk.png" style = "float:right; margin-right:2%" width = "16%"/i></a>
+				</div>
+			    </div>
+			</div>		    
+			<nav id="nav" style ="margin-top:0px;">
+					<ul style = "font-size:85%">
+						<li ><a href="index.html">Home</a></li>
+						<li>
+							<a href="">Student Support</a>
+							<ul>
+								<li><br></li>
+								<li><a href="#">Academic support</a></li>
+								<li><a href="#">Emotional Counselling</a></li>
+								<li><a href="#">Student Benevolence Fund</a></li>
+								<li><a href="#">Workshops and Sessions</a></li>
+							</ul>
+						</li>
+						<li><a href="#">New Students</a></li>
+						<li><a href="">Important Info</a>
+					   		<ul>
+							<li><br></li>
+							<li><a href="#">Under-graduate</a></li>
+							<li><a href="#">Post-graduate</a></li>
+						    </ul>
+						</li>
+						<li><a href="#">Gallery</a></li>
+						<li class = "current"><a href="#">Team</a></li>
+						<li><a href="family_tree/index.html">Family Tree</a></li>
+						<li><b><a href="#" style ="color:#ee1132">Emergency</a></b></li>
+					    
+					</ul>
+			</nav>
+		<!-- Main -->
+		<br>
+		<style>
+		    .show{
+			color:#37c0fb;
+		    }
+		</style>
+		<br><br>
+			    <div class="container">
+					<div class="row" >
+						<div class="3u 4u(narrower)" style = "border-right:solid; border-right-width:1px; padding-top:5%">
+							<ul class="links" align = "left">
+							    <a href = "#"><li id = "lihead" style = "color:#37c0fb">Head, CS</li></a>
+							    <a href = "#"><li id = "licoun">Counsellors</li></a>
+							    <a href = "#"><li id = "liugall">UG Team</li></a>
+							    <a href = "#"><li id = "liugc" style = "display:none">- Coordinators</li></a>
+							    <a href = "#"><li id = "liugo" style = "display:none">- Operations</li></a>
+							    <a href = "#"><li id = "liuga" style = "display:none">- Academics</li></a>
+							    <a href = "#"><li id = "liugg" style = "display:none">- Guidance</li></a>
+							    <a href = "#"><li id = "lipg">PG Team</a></li></a>
+							</ul>
+						<script>
+						    $("#licoun").click(function(){
+							$("#lihead").css("color","#000000");
+							$("#licoun").css("color","#37c0fb");
+							$("#liugc").css("color","#000000");
+							$("#liugo").css("color","#000000");
+							$("#liuga").css("color","#000000");
+							$("#liugg").css("color","#000000");
+							$("#lipg").css("color","#000000");
+							$("#ugc").css("display","none");
+							$("#head").css("display","none");
+							$("#coun").css("display","block");	
+							$("#ugo").css("display","none");
+							$("#pg").css("display","none"); 
+						    })
+						   
+						    $("#lihead").click(function(){
+							$("#lihead").css("color","#37c0fb");
+							$("#licoun").css("color","#000000");
+							$("#liugc").css("color","#000000");
+							$("#liugo").css("color","#000000");
+							$("#liuga").css("color","#000000");
+							$("#lipg").css("color","#000000");
+							$("#liugg").css("color","#000000");
+							$("#ugc").css("display","none");
+							$("#head").css("display","block");
+							$("#coun").css("display","none");
+							$("#ugo").css("display","none");
+							$("#pg").css("display","none");
+						    })
+						    
+						    $("#liugo").click(function(){
+							$("#lihead").css("color","#000000");
+							$("#licoun").css("color","#000000");
+							$("#liugc").css("color","#000000");
+							$("#liugo").css("color","#37c0fb");
+							$("#liuga").css("color","#000000");
+							$("#liugg").css("color","#000000");
+							$("#lipg").css("color","#000000");
+							$("#ugc").css("display","none");
+							$("#head").css("display","none");
+							$("#coun").css("display","none");
+							$("#ugo").css("display","block");
+							$("#pg").css("display","none");
+						    })
+
+						    $("#liugall").click(function(){
+						    	$("#lihead").css("color","#000000");
+						    	$("#licoun").css("color","#000000");
+							$("#liugc").css("color","#000000");
+							$("#liugo").css("color","#000000");
+							$("#liuga").css("color","#000000");
+							$("#liugg").css("color","#000000");
+							$("#lipg").css("color","#000000");
+							$("#ugc").css("display","none");
+							$("#liugc").css("display","block");
+							$("#liugo").css("display","block");
+							$("#liuga").css("display","block");
+							$("#liugg").css("display","block");
+						    })
+
+						    $("#liugc").click(function(){
+							$("#lihead").css("color","#000000");
+							$("#licoun").css("color","#000000");
+							$("#liugc").css("color","#37c0fb");
+							$("#liugo").css("color","#000000");
+							$("#liuga").css("color","#000000");
+							$("#lipg").css("color","#000000");
+							$("#ugc").css("display","block");
+						     	$("#head").css("display","none");
+							$("#coun").css("display","none");
+							$("#ugo").css("display","none");
+							$("#pg").css("display","none");
+
+						    })
+						</script>
+						</div>
+						<div class="9u 8u(narrower)" id = "head">
+						<h2 align = "center">Head, Counselling Service</h2>
+							<div class="row">
+							    <div class = "4u 3u(narrower)"></div>
+							    <div class = "4u 6u(narrower)" align = "center">
+								<img src = "images/team/head.jpg" width = "65%"/><br>
+								    <b>Prof. M.K. Ghorai</b><br>
+								    head_cs@iitk.ac.in<br>
+								    09415125895
+							    </div>
+							</div>
+						</div>
+
+						<div class="9u 8u(narrower)" id = "coun" style = "display:none">
+							<h2 align="center">Counsellors</h2>
+							<div class="row">
+							    <div class = "3u 6u(narrower)" align = "center">
+							    	<img src = "images/team/head.jpg" width = "85%"/><br>
+								    <b>Mrs. Sharmishtha Chakroborty</b><br>sharmisht@iitk.ac.in<br>
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/head.jpg" width = "85%"/><br>
+								    <b>Mrs. Rita Shukla</b><br>
+								    xyz@iitk.ac.in
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/head.jpg" width = "85%"/><br>
+								<b>Ms. Uttara Chari
+								</b><br>xyz@iitk.ac.in
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/head.jpg" width = "85%"/><br>
+								<b>Mr. Shoukat Ali</b><br>
+								xyz@iitk.ac.in
+							    </div>
+							</div>
+						</div>
+
+					    	<div class="9u 8u(narrower)" id = "ugc" style = "display:none">
+							<h2 align="center">UG Coordinators</h2>
+							<div class="row">
+							    <div class = "3u 6u(narrower)" align = "center">
+							    	<img src = "images/team/archit.jpg" width = "85%"/><br>
+								    <b>Archit Rathore</b><br>archit@iitk.ac.in<br>8953454100
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/aniket.jpg" width = "85%"/><br>
+								    <b>Kumar Aniket</b><br>
+								    kaniket@iitk.ac.in<br>8953445847
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/shanu.jpg" width = "85%"/><br>
+								<b>Shanu Vashishtha
+								</b><br>shanuv@iitk.ac.in<br>8953425531
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/swapnil.jpg" width = "85%"/><br>
+								<b>Swapnil Jain</b><br>
+								jswapnil@iitk.ac.in<br>9621538679
+							    </div>
+							</div>
+						</div>
+
+						<div class="9u 8u(narrower)" id = "ugo" style = "display:none">
+							<h2 align = "center">UG Operations Team</h2>
+							<div class="row">
+							    <div class = "3u 6u(narrower)" align = "center">
+							    	<img src = "images/team/amlan.jpg" width = "85%"/><br>
+								    <b>Amlan Kar</b><br>amlan@iitk.ac.in<br>
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/arpan.jpg" width = "85%"/><br>
+								    <b>Arpan Agarwal</b><br>arpang@iitk.ac.in<br>
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/avani.jpg" width = "86%"/><br>
+								<b>Avani Samdariya</b><br>savani@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/ligin.jpg" width = "87%"/><br>
+								<b>Ligin Anton George</b><br>ligin@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/mahnot.jpg" width = "85%"/><br>
+								<b>Rishab Mahnot</b><br>rishab@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/rishav.jpg" width = "85%"/><br>
+								<b>Rishav Jain</b><br>jrishav@iitk.ac.in<br>
+							    </div>
+							    
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/tanya.jpg" width = "85%"/><br>
+								<b>Tanya Batra</b><br>tanyab@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/utsav.jpg" width = "85%"/><br>
+								<b>Utsav Gupta</b><br>gutsav@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/vikas.jpg" width = "85%"/><br>
+								<b>Vikas Jain</b><br>vikasj@iitk.ac.in<br>
+							    </div>	
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/vishal.jpg" width = "85%"/><br>
+								<b>Vishal Kumar</b><br>vishalkr@iitk.ac.in<br>
+							    </div>	
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/parikh.jpg" width = "85%"/><br>
+								<b>Yash Parikh</b><br>yparikh@iitk.ac.in<br>
+							    </div>	
+							</div>
+						</div>
+											
+	
+						</div>
+					</div>
+			    </div>
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="8u 12u$(mobilep)">
+							<h3 align = "left">Quick Links</h3>
+						    <div class = "row">
+							<div class ="6u">
+							<ul class="links" align="left">
+								<li><a href="http://www.iitk.ac.in" target = "blank">IITK</a></li>
+								<li><a href="http://www.iitk.ac.in/dosa" target = "blank">Dean of Student Affairs</a></li>
+								<li><a href="http://www.iitk.ac.in/doaa" target = "blank">Dean of Academic Affairs</a></li>
+							</ul>
+							</div>
+							<div class ="6u">
+							<ul class="links" align="left">   
+							     <li><a href="http://spo.iitk.ac.in" target = "blank">Student Placement Office</a></li>
+							    <li><a href="http://www.iitk.ac.in/hc" target = "blank">Health Centre</a></li>
+							    <li><a href="http://pkklib.iitk.ac.in" target = "blank">P.K Kelkar Library</a></li>
+							</ul>
+							</div>
+						</div>
+						</section>
+						<section class="4u 12u(narrower) 12u$(mobilep)">
+						    <h3 align = "left">Gallery</h3>
+						    <ul class = "rslides">
+							<li><img src="images/counsel1.jpg" alt=""></li>
+							<li><img src="images/counsel2.jpg" alt=""></li>
+							<li><img src="images/counsel3.jpg" alt=""></li>
+						    </ul> 
+						</section>
+					</div>
+				</div>
+
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/CounsellingServiceIitKanpur" target ="blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://github.com/amlankar/cs_website/" target ="blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; Counselling Service IITK - 2015</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>	
+			</div>
+
+	</body>
+</html>
