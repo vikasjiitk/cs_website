@@ -108,7 +108,8 @@
 		<br><br>
 			    <div class="container">
 					<div class="row" >
-						<div class="3u 4u(narrower)" style = "border-right:solid; border-right-width:1px; padding-top:5%">
+						<div class="3u 4u(narrower)" style = "border-right:solid; border-right-width:1px;">
+							<h3>Team Structure</h3>
 							<ul class="links" align = "left">
 							    <a href = "#"><li id = "lihead" style = "color:#37c0fb">Head, CS</li></a>
 							    <a href = "#"><li id = "licoun">Counsellors</li></a>
@@ -117,7 +118,7 @@
 							    <a href = "#"><li id = "liugo" style = "display:none">- Operations</li></a>
 							    <a href = "#"><li id = "liuga" style = "display:none">- Academics</li></a>
 							    <a href = "#"><li id = "liugg" style = "display:none">- Guidance</li></a>
-							    <a href = "#"><li id = "lipg">PG Team</a></li></a>
+							    <a href = "#"><li id = "lipg">PG Team</li></a>
 							</ul>
 						<script>
 						    $("#licoun").click(function(){
@@ -215,10 +216,26 @@
 							$("#pg").css("display","none");
 							$("#uga").css("display","block"); 
 						    })
+
+						    $("#lipg").click(function(){
+							$("#lihead").css("color","#000000");
+							$("#licoun").css("color","#000000");
+							$("#liugc").css("color","#000000");
+							$("#liugo").css("color","#000000");
+							$("#liuga").css("color","#000000");
+							$("#liugg").css("color","#000000");
+							$("#lipg").css("color","#37c0fb");
+							$("#ugc").css("display","none");
+							$("#head").css("display","none");
+							$("#coun").css("display","none");
+							$("#ugo").css("display","none");
+							$("#pg").css("display","block");
+							$("#uga").css("display","none");
+						    })
 						</script>
 						</div>
 						<div class="9u 8u(narrower)" id = "head">
-						<h2 align = "center">Head, Counselling Service</h2>
+						<h3 align = "center">Head, Counselling Service</h3>
 							<div class="row">
 							    <div class = "4u 3u(narrower)"></div>
 							    <div class = "4u 6u(narrower)" align = "center">
@@ -231,7 +248,7 @@
 						</div>
 
 						<div class="9u 8u(narrower)" id = "coun" style = "display:none">
-							<h2 align="center">Counsellors</h2>
+							<h3 align="center">Counsellors</h3>
 							<div class="row">
 							    <div class = "3u 6u(narrower)" align = "center">
 							    	<img src = "images/team/head.jpg" width = "85%"/><br>
@@ -256,7 +273,7 @@
 						</div>
 
 					    	<div class="9u 8u(narrower)" id = "ugc" style = "display:none">
-							<h2 align="center">UG Coordinators</h2>
+							<h3 align="center">UG Coordinators</h3>
 							<div class="row">
 							    <div class = "3u 6u(narrower)" align = "center">
 							    	<img src = "images/team/archit.jpg" width = "85%"/><br>
@@ -281,7 +298,7 @@
 						</div>
 
 						<div class="9u 8u(narrower)" id = "ugo" style = "display:none">
-							<h2 align = "center">UG Operations Team</h2>
+							<h3 align = "center">UG Operations Team</h3>
 							<div class="row">
 							    <div class = "3u 6u(narrower)" align = "center">
 							    	<img src = "images/team/amlan.jpg" width = "85%"/><br>
@@ -330,9 +347,60 @@
 							    </div>	
 							</div>
 						</div>
-											
+					    
+						<div class="9u 8u(narrower)" id = "pg" style = "display:none">
+							<h3 align = "center">PG Core Team</h3>
+							<div class="row">
+							    <div class = "3u 6u(narrower)" align = "center">
+							    	<img src = "images/team/pg/Aarush.jpg" width = "85%"/><br>
+								    <b>Aarush Mohit Mittal</b><br>amlan@iitk.ac.in<br>
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Ashlesha.jpg" width = "85%"/><br>
+								    <b>Ashlesha Bhise</b><br>arpang@iitk.ac.in<br>
+							    </div>
+							    <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Monu.jpg" width = "86%"/><br>
+								<b>Monu</b><br>savani@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Picon.jpg" width = "87%"/><br>
+								<b>Picon Pal</b><br>ligin@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Prithvi.jpg" width = "85%"/><br>
+								<b>Prithvi</b><br>rishab@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Rupesh.jpg" width = "85%"/><br>
+								<b>Rupesh</b><br>jrishav@iitk.ac.in<br>
+							    </div>
+							    
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Sankalp.jpg" width = "85%"/><br>
+								<b>Sankalp Tiwari</b><br>tanyab@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Tapendu.jpg" width = "85%"/><br>
+								<b>Tapendu</b><br>gutsav@iitk.ac.in<br>
+							    </div>
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Vaibhav.jpg" width = "85%"/><br>
+								<b>Vaibhav</b><br>vikasj@iitk.ac.in<br>
+							    </div>	
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Varsha.jpg" width = "85%"/><br>
+								<b>Varsha</b><br>vishalkr@iitk.ac.in<br>
+							    </div>	
+							     <div class = "3u 6u(narrower)" align = "center">
+								<img src = "images/team/pg/Viplove.jpg" width = "85%"/><br>
+								<b>Viplove</b><br>yparikh@iitk.ac.in<br>
+							    </div>	
+							</div>
+						</div>
+					
 					    	<div class="9u 8u(narrower)" id = "uga" style = "display:none">
-							<h2 align = "center">UG Academics Team</h2>
+							<h3 align = "center">UG Academics Team</h3>
 							<div class="row">
 							    <div class = "3u 6u(narrower)" align = "center">
 							    	<img src = "images/team/abhishek.jpg" width = "85%"/><br>
