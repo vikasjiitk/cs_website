@@ -36,10 +36,18 @@
 			    });
 			 $("#new").mouseover(function(){
 				  $("#banner").css("opacity","0");
-		          $("#banner").css("background-image", "url('images/new.jpg')");
+				  $("#banner").css("background-image", "url('images/new.jpg')");
 				  $("#banner header").html('<h2><em>Get started on your next</em> adventure</h2>');  
 				  $("#banner").stop().animate({ opacity: 1 }, 1000);
 			    });
+
+			$("#team").mouseover(function(){
+				  $("#banner").css("opacity","0");
+				  $("#banner").css("background-image", "url('images/team.jpg')");
+				  $("#banner header").html('<h2><em>We are always here for</em> you</h2>');  
+				  $("#banner").stop().animate({ opacity: 1 }, 1000);
+			    });
+
 			 var current = "#E_1"
 			 $(".E1").mouseover(function(){
 			 	$(current).removeClass("acti");
@@ -147,7 +155,7 @@
 						    </ul>
 						</li>
 						<li><a href="#">Gallery</a></li>
-						<li><a href="#">Team</a></li>
+						<li id = "team"><a href="team.html">Team</a></li>
 						<li><a href="family_tree/index.html">Family Tree</a></li>
 						<li><b><a href="#" style ="color:#ee1132">Emergency</a></b></li>
 					    
